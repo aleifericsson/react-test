@@ -4,10 +4,19 @@ import {v4} from "uuid";
 //import PropTypes from 'prop-types';
 
 
-const List = () =>{
+function List(){
     const [sonicChars, sChadd] = useState(["Sonic", "Shadow", "Tangle", "Silver", "Amy", "Blaze", "Rouge", "Knuckles", "Tails", "Whisper"]);
     const [sonicCols, sCoadd] = useState(["royalblue", "darkslategray", "lightslategray", "silver", "pink", "plum", "hotpink", "crimson", "orange", "sandybrown"]);
 
+    const iclick = () => {
+            let newChar = [...sonicChars];
+            newChar.push(v4());
+            sChadd(newChar);
+            let newCol = [...sonicCols];
+            newCol.push("rgb(86, 101, 115)");
+            sCoadd(newCol);
+            console.log("metal");
+    }
 
     return(
         <div>
@@ -18,29 +27,12 @@ const List = () =>{
                 })}
             </ul>
             <img src={Rea}></img>
-            <Button color="red" fontSize={40} text="please work" whenclick={()=>{ //ignore, doesn't work
-                const newChar = addMetalChar(sonicChars)
-                sChadd(newChar);
-                const newCol = addMetalCol(sonicCols);
-                sCoadd(newCol);
-                console.log("metal");
-                
-            }}/>
+            <Button color="red" fontSize={40} text="please work" whenclick={iclick}/>
         </div>
     )
 }
 
-const addMetalChar = (char) =>{
-    let newChar = char;
-    newChar.push(v4());
-    return newChar;
-}
 
-const addMetalCol = (char) =>{
-    let newChar = char;
-    newChar.push("rgb(86, 101, 115)");
-    return newChar;
-}
 
 function myStyle(col){ //style uses regular js objects, no special jsx or whatever
     return {
