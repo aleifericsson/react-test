@@ -13,7 +13,11 @@ function List(){
             newChar.push(v4());
             sChadd(newChar);
             let newCol = [...sonicCols];
-            newCol.push("rgb(86, 101, 115)");
+            let col = [0,0,0];
+            col[0] = getRndInteger(0,255);
+            col[1] = getRndInteger(0,255);
+            col[2] = getRndInteger(0,255);
+            newCol.push(`rgb(${col[0]}, ${col[1]}, ${col[2]})`);
             sCoadd(newCol);
             console.log("metal");
     }
@@ -41,6 +45,10 @@ function myStyle(col){ //style uses regular js objects, no special jsx or whatev
         border: `1px solid white`,
         padding: "2px"
     }
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min +1) ) + min;
 }
 
 

@@ -9,18 +9,18 @@ import { BrowserRouter as Router, Routes, Route }
 function App() {
 
   return (
-    <>
+    <div >
       <Router>
+        <div style={{display: "flex", flexDirection:"column",justifyContent:"space-between"}}>
         <Navbar/>
         <Routes>
-          <Route exact path='/' element={<Greeting />} />
-          <Route path='/about' element={<List />} />
+          <Route exact path='/Greeting' element={<Greeting />} />
+          <Route path='/List' element={<List />} />
         </Routes>
+        <Footer/>
+        </div>
       </Router>
-      <div className="sup">Was poppin y&apos;all</div>
-      <Greeting />
-      <Footer/>
-    </>
+    </div>
   )
 }
 

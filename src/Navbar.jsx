@@ -5,10 +5,10 @@ import { NavLink} from "react-router-dom";
 export default function Navbar(){
     return (
         <>
-                    <NavLink to="/Greeting.jsx" activeStyle>
+                    <NavLink to="/Greeting" activeStyle>
                         <LinkButton><PageName>Greeting</PageName></LinkButton>
                     </NavLink>
-                    <NavLink to="/List.jsx" activeStyle>
+                    <NavLink to="/List" activeStyle>
                         <LinkButton><PageName>List</PageName></LinkButton>
                     </NavLink>
         </>
