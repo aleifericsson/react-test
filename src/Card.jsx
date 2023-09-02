@@ -1,8 +1,34 @@
-export default function Card({size=0.4,textcol="white",layer2col="#ff9955",layer3col="#666666",layer4col="#00ffff",text1="bro",text2="moment"}){
+import manU from "./assets/manchester-united.svg";
+import './Card.css'
+
+export default function Card(props){
+  return(
+  <div className="card">
+    <RawCard {...props}></RawCard>
+    <Logo></Logo>
+  </div>)
+}
+
+function Logo({size=0.4}){
+  const width = `${120*size}px`;
+  const height = `${120*size}px`;
+
+  return(<img className="logo" src={manU} 
+    style={{
+    width:{width},
+    height:{height},
+    padding:0,
+  }}
+  ></img>
+  )
+}
+
+function RawCard({size=0.4,textcol="white",layer2col="#ff9955",layer3col="#666666",layer4col="#00ffff",text1="bro",text2="moment"}){
     const width = `${732*size}px`;
     const height = `${1040*size}px`;
 
-    return(<svg
+    return(
+    <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={height}

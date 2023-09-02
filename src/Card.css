@@ -1,0 +1,13 @@
+.card{
+    box-shadow: 6px 3px 5px black;
+    margin:0px;
+    padding:0px;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    top:80%;
+    transform:translate(-50%,-50%);
+}
