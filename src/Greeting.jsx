@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Card from './Card';
 
 export default function Greeting() {
     return (<><h1>&quot;I, Sonic the Hedgehog, will defeat all fakers ever.&quot;</h1><TestList /></>);
@@ -12,6 +13,7 @@ function TestList(){
 
   return(
     <div>
+      <Card text1="grashmord" text2="from birgimham" layer4col="#bf3973"></Card>
       <div className="sup">Was poppin y&apos;all</div>
       <h1>Test title</h1>
       <ol className="test-list">
