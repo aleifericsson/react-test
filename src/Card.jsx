@@ -2,14 +2,20 @@ import manU from "./assets/manchester-united.svg";
 import './Card.css'
 
 export default function Card(props){
+  const width = `${732*props.size}px`;
+    const height = `${1040*props.size}px`;
   return(
-  <div className="card">
+  <div className="card" style={{
+    width:width,
+    height:height,
+    padding:0,
+  }} >
     <RawCard {...props}></RawCard>
     <Logo></Logo>
   </div>)
 }
 
-function Logo({size=0.4}){
+function Logo({size=0.5}){
   const width = `${120*size}px`;
   const height = `${120*size}px`;
 
