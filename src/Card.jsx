@@ -11,19 +11,28 @@ export default function Card(props){
     padding:0,
   }} >
     <RawCard {...props}></RawCard>
-    <Logo></Logo>
+    <Player size = {props.size}></Player>
+    <Logo size = {props.size}></Logo>
   </div>)
 }
 
+function Player({size=0.5}){
+  const width = `${Math.round(520*size)}px`;
+  //const height = `${Math.round(975*size)}px`;
+  return(<img src="https://www.footyrenders.com/render/marcus-rashford-69.png" className="player" style={{
+    width:width,
+    height:"auto",
+  }}></img>)
+}
+
 function Logo({size=0.5}){
-  const width = `${120*size}px`;
-  const height = `${120*size}px`;
+  const width = `${150*size}px`;
+  const height = `${150*size}px`;
 
   return(<img className="logo" src={manU} 
     style={{
-    width:{width},
-    height:{height},
-    padding:0,
+    width:width,
+    height:height,
   }}
   ></img>
   )

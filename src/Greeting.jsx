@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Card from './Card';
-import * as htmlToImage from 'html-to-image';
-import { download } from 'downloadjs'
+import html2canvas from 'html2canvas';
 
 export default function Greeting() {
     return (<><h1>&quot;I, Sonic the Hedgehog, will defeat all fakers ever.&quot;</h1><TestList /></>);
@@ -39,11 +38,10 @@ function TestList(){
 }
 
 const saveImage = () => {
-  console.log("AAA");
-  htmlToImage.toPng(document.getElementById('.card'))
-  .then(function (dataUrl) {
-    download(dataUrl, 'card.png');
-  })
+  console.log("sav");
+  html2canvas(document.querySelector(".card")).then(canvas => {
+    document.body.appendChild(canvas)
+});
 }
 
 function Save(){
