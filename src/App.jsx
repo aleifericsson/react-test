@@ -5,6 +5,7 @@ import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
+import Cards from './Cards'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path='/Greeting' element={<Greeting />} />
           <Route path='/List' element={<List />} />
+          <Route path='/Cards' element={<Cards />}/>
         </Routes>
         <Footer/>
         </div>

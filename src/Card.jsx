@@ -19,7 +19,8 @@ export default function Card(props){
 function Player({size=0.5}){
   const width = `${Math.round(520*size)}px`;
   //const height = `${Math.round(975*size)}px`;
-  return(<img src="https://www.footyrenders.com/render/marcus-rashford-69.png" className="player" style={{
+  //https://www.footyrenders.com/render/marcus-rashford-69.png
+  return(<img src={manU} className="player" style={{
     width:width,
     height:"auto",
   }}></img>)
