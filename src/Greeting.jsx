@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import Card from './Card';
-import html2canvas from 'html2canvas';
-
 export default function Greeting() {
     return (<><h1>&quot;I, Sonic the Hedgehog, will defeat all fakers ever.&quot;</h1><TestList /></>);
   }
@@ -14,9 +11,6 @@ function TestList(){
 
   return(
     <div>
-      <Card text1="grashmord" text2="from birgimham" layer4col="#bf3973" size={0.4}></Card>
-      <div className="sup">Was poppin y&apos;all</div>
-      <Save></Save>
       <h1>Test title</h1>
       <ol className="test-list">
         <li>List item 1</li>
@@ -37,17 +31,6 @@ function TestList(){
   )
 }
 
-const saveImage = () => {
-  console.log("sav");
-  html2canvas(document.querySelector(".card")).then(canvas => {
-    document.body.appendChild(canvas)
-});
-}
-
-function Save(){
-  return(<button onClick={saveImage
-  }>Save</button>)
-}
 
 function ChangeSVG(bool){
   if (bool === true){
