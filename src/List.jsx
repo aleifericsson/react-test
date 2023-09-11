@@ -1,6 +1,8 @@
 import Rea from "./assets/react.svg"
 import { useState } from "react";
 import {v4} from "uuid";
+import { motion } from "framer-motion";
+
 //import PropTypes from 'prop-types';
 
 
@@ -27,7 +29,15 @@ function List(){
             <h2>Sonic Chars</h2>
             <ul>
                 {sonicChars.map((cha) => {
-                    return (<li key = {cha} className = "sonic-char" style = {myStyle(sonicCols[sonicChars.indexOf(cha)])}>{cha}</li>);
+                    return (<motion.li 
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 100,
+                          damping: 20
+                        }}
+                         key = {cha} className = "sonic-char" style = {myStyle(sonicCols[sonicChars.indexOf(cha)])}>{cha}</motion.li>);
                 })}
             </ul>
             <img src={Rea}></img>
